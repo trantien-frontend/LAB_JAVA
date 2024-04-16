@@ -36,7 +36,7 @@ public class Triangle extends Geometry {
         System.out.println("Gia trị của thirdVertices: ");
         thirdVertices.output();
 
-        if (perimeterCalculate() == -1 || areaCalculate() == -1) {
+        if (isValid()) {
             System.out.println("Tọa độ sai không phải tam giác !!!");
         } else {
             System.out.println("Giá trị của chu vi: " + perimeterCalculate());
@@ -45,9 +45,6 @@ public class Triangle extends Geometry {
     }
 
     public double distance(Point second, Point first) {
-        System.out.println("--------------------------------");
-        System.out.println(Math.sqrt(Math.pow(second.getX() - first.getX(), 2) + Math.pow(second.getY() - first.getY(), 2)));
-        System.out.println("--------------------------------");
         return Math.sqrt(Math.pow(second.getX() - first.getX(), 2) + Math.pow(second.getY() - first.getY(), 2));
     }
 

@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println(Math.pow(5,2));
         int choose;
         do {
             menu();
@@ -20,7 +19,12 @@ public class Main {
                     Triangle triangle = new Triangle();
                     triangle.input(scanner);
                     triangle.output();
-                    System.out.println(triangle.isValid());
+                    break;
+                case 3:
+                    Rectangle rectangle = new Rectangle();
+                    rectangle.input(scanner);
+                    rectangle.output();
+                    break;
                 case 0:
                     break;
             }
